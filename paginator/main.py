@@ -52,6 +52,8 @@ class Paginator(commands.Cog):
         ...
 
     @commands.group(name="paginator", invoke_without_command=True, aliases=["paginate", "page"])
+    @commands.guild_only()
+    @commands.admin_or_permissions(administrator=True)
     async def pg(self, ctx: commands.Context):
         """Commands to manage paginators."""
         return await ctx.send_help()
