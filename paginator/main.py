@@ -337,7 +337,7 @@ class Paginator(commands.Cog):
             paginator = commands.Paginator(
                 prefix=f"# Paginator Groups for: {ctx.guild.name}",
                 max_size=2000,
-                suffix=f"\n## Use `{ctx.prefix}pg info <group_name>` to get more info about a group.",
+                suffix=f"\n## Use `{ctx.prefix}paginator info <group_name>` to get more info about a group.",
             )
 
             for group_name, group in page_groups.items():
